@@ -106,7 +106,7 @@ function serena_get_the_author_posts_link() {
 		esc_attr( sprintf( __( 'Posts by %s', 'serena' ), get_the_author() ) ),
 		get_the_author()
 	);
-    
+
 	return $link;
 }
 
@@ -455,5 +455,7 @@ function recent_posts_with_excerpts_init() {
 }
 
 add_action('widgets_init', 'recent_posts_with_excerpts_init');
+
+
 
 ?>
