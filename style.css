@@ -1,0 +1,31 @@
+/******************************************************************
+
+Theme Name: FFFFFolish
+Theme URI: https://zengxiaoluan.com/FFFFFolish
+
+Author: XiaoLuan Zeng
+Author URI: https://zengxiaoluan.com
+
+Description: A theme gift for h2y.net.cn at 2017 Christmas.
+Tags: blog, two-columns, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, flexible-header, full-width-template, front-page-post-form, translation-ready, microformats, sticky-post
+Text Domain: FFFFFolish
+
+License: GPL
+License URI: http://www.gnu.org/licenses/gpl.html
+
+Version: 0.1
+
+------------------------------------------------------------------
+
+All the CSS files are in the "library" folder! 
+This theme was developed using LESS, a CSS pre-processor. If you wish to edit the CSS you can do so directly, or use LESS.
+
+******************************************************************************************************************/
+
+.menu-item:hover > a, .current-menu-item > a {
+    border-bottom: 5px solid #ef9598;
+}
+
+.entry-title{
+    text-align: center;
+}
