@@ -1,7 +1,6 @@
 <?php
 
 /*
-
 Serena Theme Functions
 Author: Kanga Bell Co.
 URL: htp://kangabell.co
@@ -44,6 +43,9 @@ add_filter('excerpt_more', 'serena_excerpt_more');
 // translation
 get_template_part( 'library/translation', 'translation' );
 require_once('library/translation/translation.php');
+
+// custom post type
+require_once('library/inc/hot-article.inc.php');
 
 /*********************
 CLEANUP
@@ -120,6 +122,7 @@ function serena_scripts_and_styles() {
   if (!is_admin()) {
     // enqueue style.css
     wp_enqueue_style( 'foolish-style', get_template_directory_uri() . '/style.css', array(), '2017-12-17', 'all' );
+    wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/assets/bootstrap4/css/bootstrap.min.css', array(), '2017-12-23', 'all' );
     // register main stylesheet
     wp_enqueue_style( 'serena-stylesheet', get_template_directory_uri() . '/library/css/style.min.css', array(), '', 'all' );
 

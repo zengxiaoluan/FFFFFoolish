@@ -26,6 +26,10 @@ This theme was developed using LESS, a CSS pre-processor. If you wish to edit th
     border-bottom: 5px solid #ef9598;
 }
 
-.entry-title{
+.entry-title {
     text-align: center;
+}
+
+.articles {
+    border-bottom: 1px solid #eee;
 }
