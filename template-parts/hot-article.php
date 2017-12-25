@@ -4,8 +4,10 @@
 
         <?php 
             $query_args = array(
-                'post_type' => 'hot-article',
-                'post_count' => 4
+                // 'post_type' => 'hot-article',
+                'post_count' => 4,
+                'orderby'   => 'meta_value_num',
+                'meta_key'  => 'views'
             );
             $query = new WP_Query( $query_args );
          ?>
