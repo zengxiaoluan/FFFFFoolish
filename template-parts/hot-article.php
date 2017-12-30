@@ -24,7 +24,18 @@
                             <div class="hot-article-item">
                                 <a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
                                     <h2 class="hot-article-title"><?php the_title(); ?></h2>
-                                    <?php the_post_thumbnail(); ?>
+                                    <?php 
+                                        if (has_post_thumbnail()) {
+                                            the_post_thumbnail();
+                                        } else {
+                                            preg_match_all('/<img.* \/>/i', get_the_content(), $matches);
+                                            if (isset($matches[0][0])) {
+                                                echo $matches[0][0];
+                                            } else {
+                                                echo '<img height="128" src="https://zengxiaoluan.com/wp-content/uploads/2016/10/cropped-logo-3.jpg" class="custom-logo" alt="🌽曾小乱🌽" itemprop="logo">';
+                                            }
+                                        }
+                                    ?>
                                 </a>
                             </div>
                         </div>
@@ -71,7 +82,7 @@
         }
         .hot-article-item img{
             width: auto;
-            max-width: fit-content;
+            max-width: none;
             height: 100%;
             
             display: block;
