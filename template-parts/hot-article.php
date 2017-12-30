@@ -5,7 +5,7 @@
         <?php 
             $query_args = array(
                 // 'post_type' => 'hot-article',
-                'post_count' => 4,
+                'posts_per_page' => 4,
                 'orderby'   => 'meta_value_num',
                 'meta_key'  => 'views'
             );
@@ -22,8 +22,8 @@
 
                         <div class="col-sm">
                             <div class="hot-article-item">
-                                <a title="<?php the_title('&#x1f408;', '&#x1f415;'); ?>" href="<?php the_permalink(); ?>">
-                                    <h2 class="hot-article-title"><?php the_title('&#x1f408;', '&#x1f415;', true); ?></h2>
+                                <a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
+                                    <h2 class="hot-article-title"><?php the_title(); ?></h2>
                                     <?php the_post_thumbnail(); ?>
                                 </a>
                             </div>
@@ -56,6 +56,13 @@
             position: absolute;
             bottom: 0;
             left: 0;
+            z-index: 1;
+
+            transform: translateY(100%);
+            transition: all .2s ease-in-out;
+        }
+        .hot-article-item:hover .hot-article-title {
+            transform: translateY(0);
         }
         .hot-article-item {
             height: 300px;
@@ -64,9 +71,20 @@
         }
         .hot-article-item img{
             width: auto;
+            max-width: fit-content;
             height: 100%;
             
             display: block;
             margin: 0 auto;
+
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            transform-origin: -50% center;
+            z-index: 0;
+
+            transition: transform .5s;
+            will-change: transform;
         }
     </style>
