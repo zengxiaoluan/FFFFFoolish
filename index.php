@@ -3,8 +3,11 @@
 	<div id="content" class="wrap clearfix">
 
 	    <div id="main" class="eightcol first clearfix" role="main">
+
+            <?php get_template_part('template-parts/hot-banners'); ?>
 			
 			<?php get_template_part('template-parts/hot-article'); ?>
+
 			<h3 class="articles">All Articles</h3>
 		    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 				
