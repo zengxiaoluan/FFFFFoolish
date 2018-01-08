@@ -1,19 +1,21 @@
-    <div class="container-fluid">
-        <div class="banners-wrap">
-            <ul class="banners">
-                <li class="slide active"><img src="https://wx3.sinaimg.cn/mw690/005J4EGely1fn5vem8ldpj30ot0xcqbi.jpg" alt=""></li>
-                <li class="slide"><img src="https://wx4.sinaimg.cn/mw690/005J4EGely1fn5venxkevj30ot0xck0n.jpg" alt=""></li>
-                <li class="slide"><img src="https://wx4.sinaimg.cn/mw690/005J4EGely1fn5vep2d00j30ot0xcgt9.jpg" alt=""></li>
-                <li class="slide"><img src="https://wx3.sinaimg.cn/mw690/005J4EGely1fn5vekpjjcj30ot0xc0z3.jpg" alt=""></li>
-            </ul>
-            <div id="banners-tab" class="banners-tab"></div>
-        </div>
+    <div class="banners-wrap">
+        <ul class="banners">
+            <li class="slide active"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/0.png" alt=""></li>
+            <li class="slide"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/1.png" alt=""></li>
+            <li class="slide"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/2.png" alt=""></li>
+        </ul>
+        <div id="banners-tab" class="banners-tab"></div>
     </div>
 
     <style>
+        @media (max-width: 798px) {
+            .banners-wrap {
+                display: none;
+            }
+        }
         .banners-wrap {
             position: relative;
-            height: 927px;
+            height: 288px;
             overflow: hidden;
         }
         .banners-tab {
@@ -27,6 +29,8 @@
         }
         .banners .slide {
             position: absolute;
+            will-change: transform;
+            transition: transform .5s;
             transform: translate3d(0, 100%, 0);
         }
         .banners .slide.active {
