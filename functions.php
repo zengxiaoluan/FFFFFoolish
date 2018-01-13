@@ -46,6 +46,8 @@ require_once('library/translation/translation.php');
 
 // custom post type
 require_once('library/inc/hot-article.inc.php');
+// add google tag
+require_once ('library/inc/gtag.inc.php');
 
 /*********************
 CLEANUP
@@ -473,4 +475,11 @@ function disable_wp_emojicons() {
 }
 add_action( 'init', 'disable_wp_emojicons' );
 
+function debug() {
+    echo '<script src="https://js.fundebug.cn/fundebug.0.3.3.min.js" apikey="503a2996ede9ab2f3abedccef206d60db558d66aabe08e2558abc130ef78787b"></script>';
+}
+
+if (!WP_DEBUG) {
+    add_action('wp_head', 'debug');
+}
 ?>
