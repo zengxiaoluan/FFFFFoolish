@@ -8,7 +8,8 @@
 			
 			<?php get_template_part('template-parts/hot-article'); ?>
 
-			<h3 class="articles">All Articles</h3>
+			<h3 class="border-bottom pt-2 pb-2">All Articles</h3>
+
 		    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 				
 			    <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
@@ -16,13 +17,13 @@
 				    <header class="article-header">
 					
 						<h1 class="entry-title single-title" itemprop="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-						<p class="author">
+						<p class="author text-center text-secondary m-3">
 							<?php
-							  	printf(__('%1$s', 'serena'), serena_get_the_author_posts_link());
-							  	printf(__('<time datetime="%1$s" pubdate>%2$s</time>', 'serena'), get_the_time('Y-m-j'), get_the_time(get_option('date_format')) );
+							  	serena_get_the_author_posts_link();
+                                foolish_get_post_date();
 							?>
 							<span>
-								<?php printf(__( '阅读%1$s', 'foolish' ), the_views()); ?>
+								<?php printf(__( '%1$s', 'foolish' ), the_views()); ?>
 							</span>
 						</p>
 					    
@@ -40,7 +41,6 @@
 				    </footer> <!-- end article footer -->
 			
 			    </article> <!-- end article -->
-			    	
 			
 		    <?php endwhile; ?>	
 				

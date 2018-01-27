@@ -32,7 +32,6 @@ a {
   display: inline;
   position: relative;
   border-top: none;
-  border-right: 1px solid #808080;
   padding: 4px 0;
   /* showing sub-menus */
 }
@@ -54,7 +53,6 @@ a {
 .nav li ul.children li {
   float: right;
   border-right: none;
-  border-top: 1px solid #999999;
   margin-top: 0.5em;
 }
 .nav li:hover ul {
