@@ -23,7 +23,12 @@
                     <div class="col-sm">
                         <div class="hot-article-item">
                             <a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
-                                <h2 class="hot-article-title"><?php the_title(); ?></h2>
+                                <h2 class="hot-article-title">
+                                    <?php
+                                        the_title('', ' | ');
+                                        the_views();
+                                    ?>
+                                </h2>
                                 <?php 
                                     if (has_post_thumbnail()) {
                                         $image = get_the_post_thumbnail_url();
