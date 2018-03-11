@@ -105,13 +105,22 @@ function serena_get_the_author_posts_link() {
 	if ( !is_object( $authordata ) )
 		return false;
 	$link = sprintf(
-		'<a href="%1$s" title="%2$s" rel="author">%3$s</a>',
+		'<a href="%1$s" class="mr-5" title="%2$s" rel="author">
+            <span class="oi oi-person text-secondary mr-2" title="作者" aria-hidden="true"></span>
+            <span class="text-danger">%3$s</span>
+            </a>',
 		get_author_posts_url( $authordata->ID, $authordata->user_nicename ),
-		esc_attr( sprintf( __( 'Posts by %s', 'serena' ), get_the_author() ) ),
+		esc_attr( sprintf( __( 'Posts by %s', 'foolish' ), get_the_author() ) ),
 		get_the_author()
 	);
 
-	return $link;
+	echo $link;
+}
+
+function foolish_get_post_date() {
+  printf(__('<span class="oi oi-timer mr-2"></span><time datetime="%1$s" class="mr-5">%2$s</time>', 'foolish'),
+      get_the_time('Y-m-j'),
+      get_the_time(get_option('date_format')) );
 }
 
 
@@ -122,11 +131,13 @@ SCRIPTS & ENQUEUEING
 // loading jquery and reply script
 function serena_scripts_and_styles() {
   if (!is_admin()) {
+    // enqueue open-iconic-bootstrap.css
+    wp_enqueue_style('iconic-style', get_template_directory_uri() . '/assets/open-iconic-master/font/css/open-iconic-bootstrap.css', array(), '2018-01-27', 'all');
     // enqueue style.css
     wp_enqueue_style( 'foolish-style', get_template_directory_uri() . '/style.css', array(), '2017-12-17', 'all' );
     wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/assets/bootstrap4/css/bootstrap.min.css', array(), '2017-12-23', 'all' );
     // register main stylesheet
-    wp_enqueue_style( 'serena-stylesheet', get_template_directory_uri() . '/library/css/style.min.css', array(), '', 'all' );
+    wp_enqueue_style( 'serena-stylesheet', get_template_directory_uri() . '/library/css/style.min.css', array(), '2018-01-27', 'all' );
 
     // ie-only style sheet
     wp_register_style( 'serena-ie-only', get_template_directory_uri() . '/library/css/ie.min.css', array(), '' );

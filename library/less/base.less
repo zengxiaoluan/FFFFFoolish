@@ -4,6 +4,7 @@ Stylesheet: Base Stylesheet for Serena theme
 
 ******************************************************************/
 
+@serif: "Adobe Caslon Pro", Palatino, "Times New Roman", serif;
 
 /*********************
 LAYOUT (grid comes in at 768px+)
@@ -26,9 +27,9 @@ LAYOUT (grid comes in at 768px+)
 TYPOGRAPHY
 *********************/
 
-body {
+html, body {
 	font-family: @serif;
-	font-size: 18px;
+	font-size: 16px;
 	line-height: 1.45em;
 	word-wrap: break-word; /* for very long words */
 	-ms-word-wrap: break-word;
@@ -78,10 +79,6 @@ dd {
 body { 
 	color: #393939; 
 	background-color: #fefefe;
-} 
-			
-a, .button, .comment-reply-link, input[type="submit"] {
-	color:  #333;
 }
 			
 a:hover, 
@@ -113,7 +110,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 h1, .h1 {
-	font-size: 2.25em;
+	font-size: 1.5em;
 }
 
 h2, .h2 {
@@ -408,13 +405,6 @@ article {
 	}
 
 /* POST META */
-	.vcard {	
-		color: lighten(black, 35%);
-		font-style: italic;	
-		.author {
-			font-size: 1.021em;
-		}
-	}
 	.tags {
 		margin-top: 2em;
 		font-style: italic;
@@ -638,20 +628,6 @@ SIDEBAR
 			a {color: black}
 		}
 	}
-
-/*********************
-FOOTER
-*********************/
-
-#inner-footer {
-	margin-top: 40.5px;
-	border-top: 1px solid lighten(black, 40%);
-	padding: 0.68em 0 27px;
-	font-style: italic;
-	.credit {
-	
-	}
-}	
 
 /********************
 SEARCH PAGE
