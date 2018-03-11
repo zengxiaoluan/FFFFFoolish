@@ -1,4 +1,5 @@
-<?php function gtag () { ?>
+<?php 
+    function gtag () { ?>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112443998-1"></script>
@@ -10,12 +11,8 @@
         gtag('config', 'UA-112443998-1');
     </script>
 
-<?php } ?>
+<?php }
 
-<?php
-
-if (!is_admin()) {
-    add_action('wp_footer', 'gtag');
-}
-
-?>
+    if (!is_admin()) {
+        add_action('wp_footer', 'gtag');
+    }

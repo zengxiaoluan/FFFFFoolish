@@ -47,7 +47,7 @@ require_once('library/translation/translation.php');
 // custom post type
 require_once('library/inc/hot-article.inc.php');
 // add google tag
-require_once ('library/inc/gtag.inc.php');
+require_once get_stylesheet_directory() . '/library/inc/gtag.inc.php';
 
 /*********************
 CLEANUP
