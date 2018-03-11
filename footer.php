@@ -9,7 +9,7 @@
     }
     .footer-contact {
         font-size: 1.5em;
-        padding: 1em 0;
+        padding: 1em;
         /*color: var(--blue);*/
     }
 </style>
@@ -23,12 +23,18 @@
                             <p class="text-center font-weight-bold"><?php echo $nickname;?></p>
                         </div>
                         <div class="col-sm">
-                            <p class="border-bottom footer-contact">
-                                <span class="oi oi-envelope-closed"></span>
-                                <a class="mr-5" target="_blank" href="mailto:<?php echo $user_email; ?>"><?php echo $user_email; ?></a>
-                                <span class="oi oi-phone"></span>
-                                <a target="_blank" href="tel:158-7338-3200">158-7338-3200</a>
-                            </p>
+                            <div class="row border-bottom">
+                                <div class="col-sm-4 footer-contact">
+                                    <span class="oi oi-envelope-closed"></span>
+                                    <a class="mr-5" target="_blank" href="mailto:<?php echo $user_email; ?>"><?php echo $user_email; ?></a>
+                                </div>
+
+                                <div class="col-sm-4 footer-contact">
+                                    <span class="oi oi-phone"></span>
+                                    <a target="_blank" href="tel:158-7338-3200">158-7338-3200</a>
+                                </div>
+                            </div>
+
                             <p class="text-center text-muted mt-5">
                                 &copy; <?php
                               echo date('Y-m-d', strtotime(get_userdata(1)->user_registered) );

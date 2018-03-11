@@ -1,13 +1,13 @@
 
-<div id="hot-article" class="hot-article-wrap">
-    <h3 class="border-bottom pt-2 pb-2">Hot Articles</h3>
+<div id="cold-article" class="hot-article-wrap">
+    <h3 class="border-bottom pt-2 pb-2">Cold Articles</h3>
 
     <?php 
         $query_args = array(
-            // 'post_type' => 'hot-article',
-            'posts_per_page' => 5,
+            'posts_per_page' => 3,
             'orderby'   => 'meta_value_num',
-            'meta_key'  => 'views'
+            'meta_key'  => 'views',
+            'order'     => 'ASC'
         );
         $query = new WP_Query( $query_args );
      ?>

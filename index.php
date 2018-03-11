@@ -8,6 +8,8 @@
 			
 			<?php get_template_part('template-parts/hot-article'); ?>
 
+			<?php get_template_part('template-parts/cold-article'); ?>
+
 			<h3 class="border-bottom pt-2 pb-2">All Articles</h3>
 
 		    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
