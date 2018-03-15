@@ -79,11 +79,7 @@
         left: 0;
         z-index: 1;
 
-        transform: translateY(100%);
         transition: all .2s ease-in-out;
-    }
-    .hot-article-item:hover .hot-article-title {
-        transform: translateY(0);
     }
     .hot-article-item {
         height: 300px;
