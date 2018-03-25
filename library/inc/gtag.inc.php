@@ -13,6 +13,6 @@
 
 <?php }
 
-    if (!is_admin()) {
+    if (!is_admin() && !WP_DEBUG) {
         add_action('wp_footer', 'gtag');
     }

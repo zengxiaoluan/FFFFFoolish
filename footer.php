@@ -28,14 +28,9 @@
                                     <span class="oi oi-envelope-closed"></span>
                                     <a class="mr-5" target="_blank" href="mailto:<?php echo $user_email; ?>"><?php echo $user_email; ?></a>
                                 </div>
-
-                                <div class="col-sm-4 footer-contact">
-                                    <span class="oi oi-phone"></span>
-                                    <a target="_blank" href="tel:158-7338-3200">158-7338-3200</a>
-                                </div>
                             </div>
 
-                            <p class="text-center text-muted mt-5">
+                            <p class="text-left text-muted mt-5">
                                 &copy; <?php
                               echo date('Y-m-d', strtotime(get_userdata(1)->user_registered) );
                               echo ' - '.date('Y-m-d');
