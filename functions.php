@@ -472,11 +472,4 @@ function recent_posts_with_excerpts_init() {
 
 add_action('widgets_init', 'recent_posts_with_excerpts_init');
 
-function debug() {
-    echo '<script src="https://js.fundebug.cn/fundebug.0.3.3.min.js" apikey="503a2996ede9ab2f3abedccef206d60db558d66aabe08e2558abc130ef78787b"></script>';
-}
-
-if (!WP_DEBUG) {
-    add_action('wp_head', 'debug');
-}
 ?>
