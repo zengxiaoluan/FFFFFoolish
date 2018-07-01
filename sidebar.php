@@ -1,17 +1,17 @@
-				<div id="sidebar_blog" class="sidebar fourcol last clearfix" role="complementary">
+    <div class="sidebar">
 
-					<?php if ( is_active_sidebar( 'sidebar_blog' ) ) : ?>
+        <?php if ( is_active_sidebar( 'sidebar_blog' ) ) : ?>
 
-						<?php dynamic_sidebar( 'sidebar_blog' ); ?>
+            <?php dynamic_sidebar( 'sidebar_blog' ); ?>
 
-					<?php else : ?>
+        <?php else : ?>
 
-						<!-- This content shows up if there are no widgets defined in the backend. -->
-						
-						<div class="alert help">
-							<p><?php _e("Please activate some Widgets.", "serena");  ?></p>
-						</div>
+            <!-- This content shows up if there are no widgets defined in the backend. -->
 
-					<?php endif; ?>
+            <div class="alert help">
+                <p><?php _e("Please activate some Widgets.", "serena");  ?></p>
+            </div>
 
-				</div>
+        <?php endif; ?>
+
+    </div>

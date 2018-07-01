@@ -5,11 +5,12 @@ Stylesheet: 768px Wide & Up Stylesheet for Serena theme
 ******************************************************************/
 
 .wrap {
-	max-width: 1400px;
+	max-width: 1430px;
+  margin: 0 auto;
 }
 
-#inner-header {
-	float: left;	
+#header {
+  margin: 45px auto;
 }
 
 a {
@@ -20,16 +21,11 @@ a {
 	transition:         color 0.25s ease-in;
 }
 
-#main {
-	float: left;
-}
-
 .sidebar {
 	border-top: none;
 }
 
 .nav {
-	float: right;
 	padding-bottom: 0.25em;
 	//border-bottom: 1px solid lighten(black, 60%);
 	margin-bottom: 0.5em;
@@ -86,37 +82,4 @@ FOOTER
 
 .credit {
 	float: right;
-}
-
-/*********************
-GRID
-based on the 1140 grid: http://cssgrid.net/
-*********************/
-
-.onecol    { width: 4.85%;  }
-.twocol    { width: 13.45%; }
-.threecol  { width: 22.05%; }
-.fourcol   { width: 30.75%; }
-.fivecol   { width: 39.45%; }
-.sixcol    { width: 48%; }
-.sevencol  { width: 56.75%; }
-.eightcol  { width: 65.4%; }
-.ninecol   { width: 74.05%; }
-.tencol    { width: 82.7%; }
-.elevencol { width: 91.35%; }
-.twelvecol { width: 100%; }
-
-.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
-  position: relative;
-  float: left;
-  margin-left: 2.762430939%;
-}
-
-.first {
-  margin-left: 0;
-}
-
-.last {
-	float: right;
-	max-width: 338px;
 }

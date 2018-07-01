@@ -17,9 +17,6 @@ Version: 0.1
 
 ------------------------------------------------------------------
 
-All the CSS files are in the "library" folder! 
-This theme was developed using LESS, a CSS pre-processor. If you wish to edit the CSS you can do so directly, or use LESS.
-
 ******************************************************************************************************************/
 
 .menu-item:hover > a, .current-menu-item > a {
@@ -28,4 +25,8 @@ This theme was developed using LESS, a CSS pre-processor. If you wish to edit th
 
 .entry-title {
     text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+
 }

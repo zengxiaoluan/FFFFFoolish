@@ -1,12 +1,5 @@
 <?php
 
-/*
-Serena Theme Functions
-Author: Kanga Bell Co.
-URL: htp://kangabell.co
-
-*/
-
 /************* BASICS ***************/
 
 // set maximum allowed width for content
@@ -45,9 +38,13 @@ get_template_part( 'library/translation', 'translation' );
 require_once('library/translation/translation.php');
 
 // custom post type
-require_once('library/inc/hot-article.inc.php');
+require_once('inc/banner.inc.php');
+// add general settings
+require_once('inc/settings.inc.php');
 // add google tag
-require_once get_stylesheet_directory() . '/library/inc/gtag.inc.php';
+require_once get_stylesheet_directory() . '/inc/gtag.inc.php';
+// 自己写的 functions.php
+require_once get_stylesheet_directory() . '/inc/functions.inc.php';
 
 /*********************
 CLEANUP

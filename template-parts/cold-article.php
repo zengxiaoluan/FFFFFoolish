@@ -1,6 +1,6 @@
 
 <div id="cold-article" class="hot-article-wrap">
-    <h3 class="border-bottom pt-2 pb-2">Cold Articles</h3>
+    <h3 class="hot-title">Cold Articles</h3>
 
     <?php 
         $query_args = array(
