@@ -1,7 +1,5 @@
 
 <div id="hot-article" class="hot-article-wrap">
-    <h3 class="hot-title">Hot Articles</h3>
-
     <?php 
         $query_args = array(
             'posts_per_page' => 5,
@@ -12,7 +10,8 @@
      ?>
 
      <?php if ( $query->have_posts() ) : ?>
-        <div class="container-fluid">
+        <div class="container-fluid p-0">
+            <h3 class="col-md mb-3 text-danger">Hot Articles</h3>
             <?php $i = 0; while ( $query->have_posts() ) : $query->the_post(); ?>
 
                 <?php if ($i % 2 == 0) : ?>
@@ -24,8 +23,7 @@
                             <a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
                                 <h2 class="hot-article-title">
                                     <?php
-                                        the_title('', ' | ');
-                                        the_views();
+                                        the_title();
                                     ?>
                                 </h2>
                                 <?php 
@@ -82,9 +80,5 @@
         height: 300px;
         overflow: hidden;
         position: relative;
-    }
-    .hot-title {
-        margin-bottom: 45px;
-        color: rgb(127, 127, 127);
     }
 </style>

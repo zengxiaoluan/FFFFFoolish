@@ -12,3 +12,12 @@ function foolish_widgets_init() {
       'after_title'   => '</h2>',
   ) );
 }
+
+add_theme_support(
+    'html5', array(
+        'comment-form',
+        'comment-list',
+        'gallery',
+        'caption',
+    )
+);

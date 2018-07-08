@@ -17,7 +17,6 @@ TYPOGRAPHY
 html, body {
 	font-family: @serif;
 	font-size: 16px;
-	line-height: 1.45em;
 	word-wrap: break-word; /* for very long words */
 	-ms-word-wrap: break-word;
 }
@@ -45,9 +44,6 @@ blockquote {
 ul, ol {
 	padding: 0;
 	list-style-type: none;
-	li {
-		margin-bottom: 0.25em;
-	}
 }
 
 ol {
@@ -256,9 +252,6 @@ NAVIGATION
 		margin-left: 0; 
 	}
 		li {
-			border-top: 1px solid lighten(black, 40%);
-			max-width: 480px;
-			margin: 0 auto;
 			&:last-child {
 				border-bottom: none;
 			}
@@ -570,11 +563,7 @@ SIDEBAR
 	}
 
 	.widget {
-		border-top: 1px solid lighten(black, 60%);
 		padding: 1em 0;
-		&:first-child {
-			border-top: none;
-		}
 		ul {
 			margin-left: 0;
 			li {

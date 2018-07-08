@@ -6,9 +6,9 @@
             'post_type' => 'banner'
             ));
   ?>
-  <div class="container-fluid">
-      <div class="row">
-          <div class="main-carousel col-md-9">
+  <div class="container-fluid banner-wrap">
+      <div class="row align-items-center justify-content-center text-center">
+          <div class="main-carousel col-sm-12 col-md-9 mb-2">
 
             <?php if ( $query->have_posts() ) : ?>
               <?php
@@ -37,7 +37,7 @@
           </div>
 
         <?php if ( is_active_sidebar( 'ads-sidebar' ) ) : ?>
-            <div class="ads-image col-md-3">
+            <div class="ads-image col-sm-12 col-md-3">
               <?php dynamic_sidebar( 'ads-sidebar' ); ?>
             </div>
         <?php endif; ?>
@@ -59,8 +59,10 @@
   </script>
 
   <style>
+      .banner-wrap {
+          margin-bottom: 20px;
+      }
       .main-carousel {
           width: 798px;
-          margin: 0 0 70px 0;
       }
   </style>

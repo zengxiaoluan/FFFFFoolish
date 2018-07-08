@@ -25,8 +25,8 @@
 	<body <?php body_class('zengxiaoluan.com'); ?>>
         <header id="header" class="wrap" role="banner">
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-4">
+                <div class="row align-items-center">
+                    <div class="col-sm-12 col-md-6 mb-2">
                         <div>
                           <?php if(get_theme_mod( 'serena_logo' )) : ?>
                               <a href="<?php echo esc_url(home_url('/')); ?>" rel="nofollow"><img src="<?php echo get_theme_mod( 'serena_logo' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"></a>
@@ -35,20 +35,17 @@
                             <p><?php bloginfo('description'); ?></p>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <nav role="navigation">
+                    <div class="col-sm-12 col-md-6">
                           <?php
                           wp_nav_menu(array(
-                              'container' => false,                           // remove nav container
-                              'container_class' => 'menu',           // class of container
-                              'menu' => __( 'The Main Menu', 'serena' ),  // nav name
-                              'menu_class' => 'nav top-nav',         // adding custom nav class
+                              'container' => false,
+                              'menu' => __( 'The Main Menu', 'foolish' ),  // nav name
+                              'menu_class' => 'nav',         // adding custom nav class
                               'theme_location' => 'main-nav',                 // where it's located in the theme
                               'depth' => 2,                                   // limit the depth of the nav
                               'fallback_cb' => 'serena_main_nav_fallback'      // fallback function
                           ));
                           ?>
-                        </nav>
                     </div>
                 </div>
             </div>

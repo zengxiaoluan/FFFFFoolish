@@ -1,7 +1,5 @@
 
 <div id="cold-article" class="hot-article-wrap">
-    <h3 class="hot-title">Cold Articles</h3>
-
     <?php 
         $query_args = array(
             'posts_per_page' => 3,
@@ -13,20 +11,20 @@
      ?>
 
      <?php if ( $query->have_posts() ) : ?>
-        <div class="container-fluid">
+        <div class="container-fluid p-0">
+            <h3 class="mb-3 text-primary col-md">Cold Articles</h3>
             <?php $i = 0; while ( $query->have_posts() ) : $query->the_post(); ?>
 
                 <?php if ($i % 2 == 0) : ?>
                     <div class="row hot-article-row">
                 <?php endif; ?>
 
-                    <div class="col-sm">
+                    <div class="col-md">
                         <div class="hot-article-item">
                             <a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
                                 <h2 class="hot-article-title">
                                     <?php 
-                                        the_title('', ' | ');
-                                        the_views();
+                                        the_title();
                                     ?>
                                 </h2>
                                 <?php 

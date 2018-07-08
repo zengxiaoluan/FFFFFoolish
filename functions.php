@@ -24,8 +24,6 @@ add_filter( 'style_loader_tag', 'serena_ie_conditional', 10, 2 );
 add_action('after_setup_theme','serena_theme_support');
 // adding sidebars to Wordpress (these are created in functions.php)
 add_action( 'widgets_init', 'serena_register_sidebars' );
-// adding the serena search form (created in functions.php)
-add_filter( 'get_search_form', 'serena_wpsearch' );
 
 // cleaning up random code around images & blockquotes
 add_filter('the_content', 'serena_filter_ptags_on_images');
@@ -280,22 +278,10 @@ function serena_comments($comment, $args, $depth) {
 			</section>
 			<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
 		</article>
+    </li>
     <!-- </li> is added by WordPress automatically -->
 <?php
 } // don't remove this bracket!
-
-
-
-/************* SEARCH FORM LAYOUT *****************/
-
-// Search Form
-function serena_wpsearch($form) {
-    $form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
-    <input type="text" value="' . get_search_query() . '" name="s" id="s" />
-    </form>';
-    return $form;
-}
-
 
 /************* THEME CUSTOMIZER *****************/
 

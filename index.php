@@ -3,7 +3,7 @@
 	<div class="wrap">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-9">
+                <div class="col-md-9 p-0">
                     <div id="main" class="first clearfix" role="main">
 
                       <?php get_template_part('template-parts/banner'); ?>
@@ -12,41 +12,37 @@
 
                       <?php get_template_part('template-parts/cold-article'); ?>
 
-                        <h3 class="hot-title">All Articles</h3>
+                        <div class="container-fluid">
+                            <div class="col-md">
+                                <h3 class="text-info">All Articles</h3>
+                              <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-                      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                                  <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 
-                          <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
+                                      <header class="article-header">
 
-                              <header class="article-header">
+                                          <h1 class="entry-title single-title" itemprop="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+                                          <p class="author text-center text-secondary m-3">
+                                            <?php
+                                            serena_get_the_author_posts_link();
+                                            foolish_get_post_date();
+                                            ?>
+                                              <span>
+								        <?php printf(__( '%1$s', 'foolish' ), the_views()); ?>
+							        </span>
+                                          </p>
 
-                                  <h1 class="entry-title single-title" itemprop="headline"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-                                  <p class="author text-center text-secondary m-3">
-                                    <?php
-                                    serena_get_the_author_posts_link();
-                                    foolish_get_post_date();
-                                    ?>
-                                      <span>
-								<?php printf(__( '%1$s', 'foolish' ), the_views()); ?>
-							</span>
-                                  </p>
+                                      </header>
 
-                              </header> <!-- end article header -->
+                                      <section class="entry-content clearfix">
+                                        <?php the_excerpt(); ?>
+                                      </section>
 
-                              <section>
-                                <?php the_post_thumbnail( 'post-thumbnail', '' ); ?>
-                              </section>
+                                  </article>
 
-                              <section class="entry-content clearfix">
-                                <?php the_excerpt(); ?>
-                              </section> <!-- end article section -->
-
-                              <footer class="article-footer">
-                              </footer> <!-- end article footer -->
-
-                          </article> <!-- end article -->
-
-                      <?php endwhile; ?>
+                              <?php endwhile; ?>
+                            </div>
+                        </div>
 
                           <nav class="wp-prev-next">
                               <ul>

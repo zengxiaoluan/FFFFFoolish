@@ -23,10 +23,31 @@ Version: 0.1
     border-bottom: 5px solid #ef9598;
 }
 
-.entry-title {
+.widget_media_image img {
+    width: 100%;
+}
+.widgettitle {
+    color: #6c757d;
+}
+#wp-calendar{
+    width: 100%;
+}
+#wp-calendar caption { text-align: right; color: #333; font-size: 12px; margin-top: 10px; margin-bottom: 15px; }
+#wp-calendar thead {
+    font-size: 16px;
     text-align: center;
 }
-
-@media screen and (max-width: 768px) {
-
+#wp-calendar thead th { padding-bottom: 10px; }
+#wp-calendar tbody { color: #aaa; }
+#wp-calendar tbody td a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: #c33545;
+    color: white;
 }
+#wp-calendar tbody td { background: #f5f5f5; border: 1px solid #fff; text-align: center; padding:8px;}
+#wp-calendar tbody td:hover { background: #fff; }
+#wp-calendar tbody .pad { background: none; }
+#wp-calendar tfoot #next { font-size: 10px; text-transform: uppercase; text-align: right; }
+#wp-calendar tfoot #prev { font-size: 10px; text-transform: uppercase; padding-top: 10px; }
